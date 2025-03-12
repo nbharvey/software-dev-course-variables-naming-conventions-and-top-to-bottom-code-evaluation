@@ -24,9 +24,20 @@ Things to reflect on:
   
 */
 
-let a = "Alice";
+/* Unclear code:
+let a = "Alice"; a is a confusing name choice, as is b, c, and d. will change to be more descriptive.
 let b = 5;
-let c = 20;
-let d = a + " bought " + b + " items for $" + c + ".";
+let c = 20; will add a variable here to calculate the total cost so this can be scaled for other products
+let d = a + " bought " + b + " items for $" + c + "."; //should use template literals instead of concatenation for cleaner code
+I will also make the string items into a variable to reusable
+console.log(d); */
 
-console.log(d);
+//Corrected code
+let nameOfCustomer = "Alice";
+let quantity = 5;
+let item = "cupcakes";
+let price = 4;
+let totalCost = quantity * price;
+let outputMessage = `${nameOfCustomer} bought ${quantity} ${item} for $${totalCost}.`;
+
+console.log(outputMessage);
